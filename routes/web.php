@@ -22,9 +22,7 @@ Route::get('/coba', function () {
     return view(' coba');
 });
 
-Route::get('/coba/{no}', function ($no) {
-    return 'coba ke-' . $no;
-});
+Route::get('/coba/{no}',  [cobacontroller::class, 'coba']);
 
 Route::get('/test', [cobacontroller::class, 'index']);
 
