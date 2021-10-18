@@ -50,7 +50,7 @@
         svg,
         video {
             display: block;
-            vertical-align: middle
+
         }
 
         video {
@@ -394,7 +394,6 @@
                 color: #6b7280;
                 color: rgba(107, 114, 128, var(--tw-text-opacity))
             }
-        }
         }
     </style>
 
