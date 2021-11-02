@@ -26,11 +26,12 @@
                     <div class="navbar-nav">
                         <a class="nav-link active" aria-current="page" href="/">Home</a>
                         <a class="nav-link" href="/friends">Friends</a>
+                        <a class="nav-link" href="/groups">Groups</a>
                     </div>
                 </div>
             </div>
         </nav>
-        <a href="/friends/create" class="card-link btn-primary">Tambah teman</a>
+
         @yield('content')
     </div>
     <!-- Optional JavaScript; choose one of the two! -->

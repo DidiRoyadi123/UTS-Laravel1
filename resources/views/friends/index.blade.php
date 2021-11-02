@@ -2,11 +2,11 @@
 @section ('title','Friends')
 
 @section ('content')
-
+<a href="/friends/create" class="card-link btn-primary">Tambah teman</a>
 @foreach ($friends as $friend)
 
 <div class="card" style="width: 18rem;">
-    <div class="card-body">
+    <div class="card-body p-auto">
         <a href="/friends/{{$friend['id']}}" class="card-title">{{$friend['nama']}}</a>
         <h6 class="card-subtitle mb-2 text-muted">{{$friend['no_tlp']}}</h6>
         <p class="card-text">{{$friend['alamat']}}</p>
