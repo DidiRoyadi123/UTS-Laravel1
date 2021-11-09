@@ -12,18 +12,27 @@
 
         <hr>
 
-        @foreach ($group->friends as $friend)
-        <li> {{$friend->nama}} </li>
+        <ul class="list-group">
+            @foreach ($group->friends as $friend)
 
-        @endforeach
-        <a href="" class="card-link btn-primary">Tambah Anggota</a>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                {{$friend->nama}}
+                <form action="/groups/deleteaddmembers/{{ $friend->id }}" method="POST">
+                    @csrf
+                    @method('PUT')
+                    <button type="submit" class="badge bg-danger">X</button>
+                </form>
+
+                @endforeach
+        </ul>
+        <a href="/groups/addmembers/{{$group['id']}}" class="card-link btn-primary">Tambah Anggota</a>
         <hr>
 
         <a href="groups/{{$group['id']}}/edit" class="card-link btn-warning">Edit Group</a>
         <form action="/groups/{{$group['id']}}" method="POST">
             @csrf
             @Method('delete')
-            <button class="card-link btn-danger">Hapus</a>
+            <button class="card-link btn-danger">Hapus Group</a>
         </form>
     </div>
 </div>
