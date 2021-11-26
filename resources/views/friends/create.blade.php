@@ -30,5 +30,9 @@
     </div>
     <button type="submit" class="btn btn-primary">Submit</button>
 </form>
+<br>
+<div class="d-grid gap-2 d-md-block">
+    <button class="btn btn-warning" type="button"> <a href="/friends" style="text-decoration:none " class="link-light">Kembali</a></button>
+</div>
 
 @endsection

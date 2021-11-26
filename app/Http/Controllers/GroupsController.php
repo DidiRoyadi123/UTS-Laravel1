@@ -61,9 +61,11 @@ class GroupsController extends Controller
      */
     public function show($id)
     {
-        $group = Groups::where('id', $id)->first();
-        return view('groups.show', ['group' => $group]);
+
+        $groups = Groups::where('groups_id', $id)->first();
+        return view('groups.show', ['groups' => $groups]);
     }
+
 
     /**
      * Show the form for editing the specified resource.
